@@ -1,0 +1,158 @@
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* recuadro grande derecho */
+.cv-container {
+  display: flex;
+  max-width: 1000px;
+  background: rgb(246, 233, 253);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ====== Columna izquierda ====== */
+/* recuadro grande izquierdo */
+.left-column {
+  width: 35%;
+  background: linear-gradient(180deg, #d2adff, rgb(246, 233, 253));
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Foto con marco degradado */
+.profile-pic {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid transparent;
+  background: linear-gradient(45deg, #c7aef5, #e5d4ff);
+  background-clip: padding-box;
+  padding: 5px;
+}
+
+.left-column h1 {
+  font-size: 1.6em;
+  margin-bottom: 5px;
+}
+
+.left-column h2 {
+  font-size: 1em;
+  font-weight: normal;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Secciones con fondo recuadros*/
+.left-column section {
+  margin-top: 25px;
+  text-align: left;
+  padding: 15px;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Títulos en recuadros*/
+.left-column h3, 
+.right-column h3 {
+  display: inline-block;
+  font-size: 1em;
+  color: white;
+  background: #b38cd9;   /* Lila pastel suave */
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+/* Texto en izquierda */
+.left-column p {
+  font-size: 0.9em;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+/* ====== Columna derecha ====== */
+.right-column {
+  width: 65%;
+  padding: 30px;
+}
+
+.right-column section {
+  margin-bottom: 25px;
+}
+
+/* Texto derecha */
+.right-column p {
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Habilidades con barras */
+.skill {
+  margin-bottom: 12px;
+}
+
+.skill span {
+  display: block;
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.bar {
+  background: #eee;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  background: linear-gradient(90deg, #b38cd9, #e5d4ff);
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Experiencia y Educación en derecha */
+.exp-item, .edu-item {
+  margin-bottom: 15px;
+}
+
+.year {
+  font-weight: bold;
+  color: #555;
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.9em;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cv-container {
+    flex-direction: column;
+  }
+  
+  .left-column, .right-column {
+    width: 100%;
+  }
+}
